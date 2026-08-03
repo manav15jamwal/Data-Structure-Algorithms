@@ -3,6 +3,9 @@
 
 def is_subsequence(str1,str2):
     fast,slow = 0,0
+    # In case of "" empty string
+    if len(str1) == 0:
+        return True
     while fast < len(str2):
         if str1[slow] == str2[fast]:
             slow+=1
