@@ -11,7 +11,7 @@ def fruits_into_basket(array):
     seen = {}
     while right < len(array):
         seen[array[right]] = seen.get(array[right],0)+1
-        if len(seen) > 2:
+        while len(seen) > 2:
             if seen[array[left]]>1:
                 seen[array[left]]-=1
             else:
@@ -19,7 +19,6 @@ def fruits_into_basket(array):
             left+=1
         maximum = max(maximum,sum(seen.values()))
         right+=1
-        print(seen)
     return maximum
 
 print(fruits_into_basket([1,2,1,2,3]))
