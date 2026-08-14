@@ -17,7 +17,8 @@ def fruits_into_basket(array):
             else:
                 seen.pop(array[left])
             left+=1
-        maximum = max(maximum,sum(seen.values()))
+        # maximum = max(maximum,sum(seen.values()))
+        maximum = max(maximum,right-left+1)
         right+=1
     return maximum
 
