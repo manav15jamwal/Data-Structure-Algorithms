@@ -20,4 +20,4 @@ def max_avg(array,k):
             left+=1
         right+=1
     return avg
-print(max_avg([1,2,3,4,6],2))
+print(max_avg([9,7,3,5,6,2,0,8,1,9],6))
